@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 94.1%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+}
+
+.str-chat__channel-list {
+  width: 30%;
+}
+
+.str-chat__channel {
+  width: 100%;
+}
+
+.str-chat__thread {
+  width: 45%;
+}
+
+
+
+@layer utilities {
+  /* responsive container */
+  .container {
+    width: 100%;
+  }
+  /* @screen sm {
+    .container { max-width: 640px; }
+  }
+  @screen md {
+    .container { max-width: 768px; }
+  }
+  @screen lg {
+    .container { max-width: 1024px; }
+  }
+  @screen xl {
+    .container { max-width: 1280px; }
+  } */
+
+  /* base responsive typography */
+  html { font-size: 16px; }
+  @media (max-width: 640px) { html { font-size: 15px; } }
+  @media (max-width: 420px) { html { font-size: 14px; } }
+
+  /* improved focus states for accessibility */
+  .focus-ring:focus {
+    outline: 2px solid rgba(59,130,246,0.6);
+    outline-offset: 2px;
+  }
+
+  /* small spinner */
+  .spinner {
+    border-radius: 9999px;
+    border: 2px solid rgba(0,0,0,0.08);
+    border-top-color: rgba(59,130,246,1);
+    width: 1rem;
+    height: 1rem;
+    animation: spin 0.8s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+}
