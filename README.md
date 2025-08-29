@@ -1,32 +1,19 @@
-# Next.js Stream Chat
+# getStream.io Integration
 
-chat app built with Next.js, MongoDB, and Stream (getstream.io). Includes auth, 1:1 messaging, and a small component library.
+A lightweight chat application built with Next.js, MongoDB, and [Stream Chat](https://getstream.io).  
+This project was created to test and demonstrate GetStream integration with a Next.js stack.  
+It includes authentication, basic 1:1 messaging, and a small set of reusable UI components.
 
-## Quick start
+## Quick Start
 
-1. Create a `.env.local` with:
-   - NEXT_PUBLIC_STREAM_KEY
-   - STREAM_SECRET
-   - MONGODB_URI
-   - JWT_SECRET
+1. Create a `.env.local` file with the following variables:
+   - `NEXT_PUBLIC_STREAM_KEY`
+   - `STREAM_SECRET`
+   - `MONGODB_URI`
+   - `JWT_SECRET`
 
-2. Install & run:
+2. Install dependencies and run the dev server:
 
    ```bash
    npm install
    npm run dev
-   ```
-
-Open http://localhost:3000 — register, login, and start chatting.
-
-
-## Project bits
-
-- Frontend: Next.js + TypeScript
-- Styling: Tailwind
-- DB: MongoDB (Mongoose)
-- Chat: Stream Chat API
-
-## License
-
-MIT
